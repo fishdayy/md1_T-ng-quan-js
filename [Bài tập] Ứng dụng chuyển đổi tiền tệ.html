@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th> Amount</th>
+            <th></th>
+            <th> From Currency</th>
+            <th></th>
+            <th> To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="tien">
+            </td>
+            <td width="20px"></td>
+            <td>
+                <select id="sl1">
+                    <option value="vn">VietNam</option>
+                    <option value="usd">USD</option>
+                </select>
+            </td>
+            <td width="20px"></td>
+            <td>
+                <select id="sl2">
+                    <option value="vn">VietNam</option>
+                    <option value="usd">USD</option>
+                </select>
+            </td>
+            <td width="10px"></td>
+            <td>
+                <button onclick="ketqua()">Convert</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+<script>
+    function ketqua(){
+        let a = document.getElementById('tien').value;
+        let b = document.getElementById('sl1').value;
+        let c = document.getElementById('sl2').value;
+        if (b == c){
+            alert(a);
+        }
+        if ( b == "vn" && c == "usd"){
+            alert(a/22000)
+        }
+        if ( b == "usd" && c =="vn"){
+            alert(a * 22000)
+        }
+    }
+</script>
