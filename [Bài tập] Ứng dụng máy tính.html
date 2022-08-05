@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<div>
+  <input type="number" id="so1" placeholder="Nhập số thứ nhất" />
+  <input type="number" id="so2" placeholder="Nhập số thứ hai" />
+  <button onclick="tong()">Cộng</button>
+  <button onclick="hieu()">Trừ</button>
+  <button onclick="tich()">Nhân</button>
+  <button onclick="thuong()">Chia</button>
+  <h1>Result:</h1>
+    <div id="ketqua">0</div>
+</div>
+</body>
+</html>
+<script>
+    function tong(){
+        let a = +document.getElementById('so1').value;
+        let b = +document.getElementById('so2').value;
+        let ketqua = a + b;
+        document.getElementById('ketqua').innerHTML = ketqua;
+    }
+    function hieu(){
+        let a = +document.getElementById('so1').value;
+        let b = +document.getElementById('so2').value;
+        let ketqua = a - b;
+        document.getElementById('ketqua').innerHTML = ketqua;
+    }
+    function tich(){
+        let a = +document.getElementById('so1').value;
+        let b = +document.getElementById('so2').value;
+        let ketqua = a * b;
+        document.getElementById('ketqua').innerHTML = ketqua;
+    }
+    function thuong(){
+        let a = +document.getElementById('so1').value;
+        let b = +document.getElementById('so2').value;
+        let ketqua = a / b;
+        document.getElementById('ketqua').innerHTML = ketqua;
+    }
+</script>
